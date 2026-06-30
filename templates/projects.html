@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AB Portfolio</title>
+  <link href="https://fonts.cdnfonts.com/css/segoe-ui-4" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/style.css" />
+</head>
+<header>
+  <div>
+    <a href="/" class="logo">AB Portfolio</a>
+  </div>
+  <nav>
+    <a class="nav-but" href="/">Home</a>
+    <a class="nav-but" href="/about">About me</a>
+    <a class="nav-but" href="/projects">My projects</a>
+    <a class="nav-but" href="/contact">Contact</a>
+  </nav>
+</header>
+<body>
+
+  <main>
+    <section class="hero">
+      <div clasProjectss="section-inner">
+        <p class="eyebrow">My Projects</p>
+        <h2>Here are some of my projects:</h2>
+        <div class="cards">
+          <div class="card">
+            <div class="card-icon">🤖</div>
+            <h3 style="color: white">Corewar</h3>
+            <img src="../static/corewar.png" alt="csnake showcase" width="600" height="600" style="border-radius: 7px;">
+            <p class="project-text">The goal of this project is to make a battle royale among robots. We had to create a virtual machine and manage its memory, compile the robot files and execute their commands.</p>
+            <a href="https://github.com/WanL17/corewar" class="btn btn-project">Go to the project</a>
+          </div>
+          <div class="card">
+            <div class="card-icon">💻</div>
+            <h3 style="color: white">42sh</h3>
+            <p class="project-text">In a group of 5 people we managed to make a functional shell inspired by TCSH entirely in C.</p>
+            <a href="https://github.com/WanL17/42sh" class="btn btn-project">Go to the project</a>
+          </div>
+          <div class="card">
+            <div class="card-icon">🎮</div>
+            <h3 style="color: white">Wolf3D</h3>
+            <img src="../static/wolf3d.png" alt="csnake showcase" width="550" height="400" style="border-radius: 7px;">
+            <p class="project-text">This is a recreation of the famous game Wolfenstein3D, it is motorized by a raycast entirely made in C, enemies, multiple weapons and increased difficulty (me and my group decide to go with a Persona 5 style).</p>
+            <a href="https://github.com/WanL17/Wolf3D" class="btn btn-project">Go to the project</a>
+          </div>
+          <div class="card">
+            <div class="card-icon">🐍</div>
+            <h3 style="color: white">Csnake</h3>
+            <video width="1000" autoplay loop>
+              <source src="../static/csnake_showcase.mp4" type="video/mp4">
+            </video>
+            <p class="project-text">To test my knowledge and my skills about C, I decided to remake the famous game Snake for terminal user interface thanks to the Ncurses library.</p>
+            <a href="https://github.com/WanL17/csnake" class="btn btn-project">Go to the project</a>
+          </div>
+          <div class="card">
+            <div class="card-icon">📄</div>
+            <h3 style="color: white">Cuddle</h3>
+            <p class="project-text">This is the first project of data of the 1st year at EPITECH. This project is a remake of the Pandas library in C, which consists on get, then parse and sort informations from a CSV file.</p>
+            <a href="https://github.com/WanL17/cuddle" class="btn btn-project">Go to the project</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="contact">
+      <div class="section-inner center">
+        <p class="eyebrow">Contact</p>
+        <h2>Interested in my profile ? <span class="accent">Contact me.</span></h2>
+        <div class="contact-buttons">
+          <a href="/contact" class="btn btn-primary">Contact Me</a>
+          <button class="btn btn-ghost" onclick="copyEmail()">Copy my email</button>
+        </div>
+        <p class="toast" id="toast"></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="../static/script.js"></script>
+</body>
+</html>

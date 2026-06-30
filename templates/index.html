@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AB Portfolio</title>
+  <link href="https://fonts.cdnfonts.com/css/segoe-ui-4" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/style.css" />
+</head>
+<body>
+
+  <header>
+    <div>
+      <a href="/" class="logo">AB Portfolio</a>
+    </div>
+    <nav>
+      <a class="nav-but" href="/">Home</a>
+      <a class="nav-but" href="/about">About me</a>
+      <a class="nav-but" href="/projects">My projects</a>
+      <a class="nav-but" href="/contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero" style="max-width: 900px; margin: 0 auto;">
+      <p class="eyebrow">Welcome on my portfolio</p>
+      <h1>Ideas that become <span class="accent">real.</span></h1>
+      <p class="subtitle">I create, concept, build... <span class="accent">in brief I code.</span></p>
+      <div class="hero-buttons">
+        <a href="/projects" class="btn btn-primary">Come check my projects</a>
+        <a href="/contact" class="btn btn-primary">Contact Me</a>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="section-inner">
+        <p class="eyebrow">About me</p>
+        <h2>Who am I ?</h2>
+        <p class="body-text">Hi my name is Alexis BERLET, I am a student at EPITECH Lyon learning about Information Technology.</p>
+        <a class="btn btn-project" href="/about">More about me</a>
+        <div class="hidden-info" id="moreInfo">
+          <p>J'aime le design épuré, le code lisible et les projets qui ont du sens. Si vous partagez ces valeurs, on s'entendra très bien.</p>
+        </div>
+      </div>
+      <img src="../static/me.jpg" alt="csnake showcase" width="300" height="300" style="border-radius: 300px; margin-left: 900px;">
+    </section>
+
+    <section class="section alt" id="contact">
+      <div class="section-inner center">
+        <p class="eyebrow">Contact</p>
+        <h2>Interested in my profile ? <span class="accent">Contact me.</span></h2>
+        <div class="contact-buttons">
+          <a href="/contact" class="btn btn-primary">Contact Me</a>
+          <button class="btn btn-ghost" onclick="copyEmail()">Copy my email</button>
+        </div>
+        <p class="toast" id="toast"></p>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="../static/script.js"></script>
+</body>
+</html>

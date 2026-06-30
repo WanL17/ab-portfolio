@@ -1,0 +1,324 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:       #0f0f11;
+  --bg-alt:   #16161a;
+  --surface:  #1e1e24;
+  --border:   #2a2a33;
+  --accent:   white;
+  --accent-2: #8b6fff;
+  --text:     #e8e8f0;
+  --muted:    #adadbe;
+  --font-display: 'Geist Mono', monospace;
+  --geist: 'Geist Mono', monospace;
+  --segoe: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-body: system-ui, -apple-system, sans-serif;
+  --radius: 10px;
+  --transition: 0.22s ease;
+  --anim-appear: fadeIn 2s ease;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.6;
+  min-height: 100vh;
+  color: rgb(165, 165, 165);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2rem 2.5rem;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  background: rgba(15, 15, 17, 0.88);
+  backdrop-filter: blur(12px);
+  z-index: 100;
+}
+
+.logo {
+  font-family: var(--segoe);
+  font-size: 25px;
+  font-weight: 550;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+  transition: color var(--transition);
+}
+nav a:hover { color: var(--text); }
+
+.nav-but {
+  font-family: var(--geist);
+  font-size: 17px;
+  font-weight: 500;
+  margin-top: 7px;
+}
+
+.section, .hero {
+  padding: 5rem 2.5rem;
+}
+
+.section.alt {
+  background: var(--bg-alt);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.section-inner.center {
+  text-align: center;
+}
+
+.hero {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  transition: border-color var(--transition), transform var(--transition);
+}
+
+.eyebrow {
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  animation: var(--anim-appear);
+}
+
+h1 {
+  font-family: var(--geist);
+  font-size: 60px;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  overflow: hidden;
+  border-right: 5px solid rgb(224, 224, 224);
+  white-space: nowrap;
+  animation:
+    typing 3.0s steps(17, end),
+    blink-caret .75s step-end 2.0s 4 forwards;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: white; }
+}
+
+.accent {
+  color: var(--accent);
+  font-weight: 800;
+}
+
+.subtitle {
+  font-family: var(--segoe);
+  color: var(--muted);
+  font-size: 1.1rem;
+  max-width: 520px;
+  margin-bottom: 2.5rem;
+  margin-left: 5px;
+  animation: var(--anim-appear);
+}
+
+h2 {
+  font-family: var(--geist);
+  font-weight: 500;
+  letter-spacing: 0;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  animation: var(--anim-appear);
+}
+
+h3 {
+  font-family: var(--segoe);
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.01em;
+}
+
+.body-text {
+  color: var(--muted);
+  font-size: 1rem;
+  margin-bottom: 1.8rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.65rem 1.5rem;
+  font-size: 0.9rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  transition: all var(--transition);
+  text-decoration: none;
+  animation: var(--anim-appear);
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #0f0f11;
+}
+.btn-primary:hover {
+  background: #d0d0d0;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(250, 255, 235, 0.25);
+}
+
+.btn-secondary {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+.btn-secondary:hover {
+  background: var(--border);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+.btn-outline:hover {
+  background: rgba(200, 240, 74, 0.08);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--border);
+}
+.btn-ghost:hover {
+  color: var(--text);
+  border-color: var(--text);
+}
+
+.hero-buttons, .contact-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  transition: border-color var(--transition), transform var(--transition);
+}
+
+.contact-buttons {
+  justify-content: center;
+}
+
+.hidden-info {
+  display: none;
+  margin-top: 1.2rem;
+  padding: 1.2rem 1.5rem;
+  background: var(--surface);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  animation: fadeIn 0.3s ease;
+}
+
+.hidden-info.visible {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.8rem 1.5rem;
+  margin-top: 30px;
+  min-width: 800px;
+  transition: border-color var(--transition), transform var(--transition);
+  animation: var(--anim-appear);
+}
+
+.card:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+}
+
+.card-icon {
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+  color: var(--accent);
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.toast {
+  margin-top: 1.2rem;
+  font-size: 0.88rem;
+  color: var(--accent);
+  min-height: 1.4rem;
+  letter-spacing: 0.03em;
+  transition: opacity 0.4s;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 600px) {
+  header { padding: 1rem 1.2rem; }
+  nav { gap: 1.2rem; }
+  .hero, .section { padding: 3.5rem 1.2rem; }
+  .hero-buttons, .contact-buttons { flex-direction: column; }
+  .btn { text-align: center; }
+}
+
+.project-text {
+  font-family: var(--geist);
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+
+.btn-project {
+  background: #0f0f11;
+  color: white;
+  border: 1px solid;
+  border-radius: 5px;
+  border-color: white;
+}
+.btn-project:hover {
+  background: #d0d0d0;
+  transform: translateY(-2px);
+  border: 2px solid;
+  border-color: #0f0f11;
+  color: #0f0f11;
+  box-shadow: 0 6px 20px rgba(250, 255, 235, 0.25);
+}
