@@ -7,6 +7,7 @@
   <link href="https://fonts.cdnfonts.com/css/segoe-ui-4" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100..900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./static/css/style.css" />
 </head>
@@ -17,7 +18,7 @@
       <a href="./" class="logo">AB Portfolio</a>
     </div>
     <nav>
-      <a class="nav-but" href="./">Home</a>
+      <a class="nav-but" href="./index.html">Home</a>
       <a class="nav-but" href="./about/about.html">About me</a>
       <a class="nav-but" href="./projects/projects.html">My projects</a>
       <a class="nav-but" href="./contact/contact.html">Contact</a>
@@ -26,7 +27,19 @@
 
   <main>
 
-    <section class="hero" style="max-width: 900px; margin: 0 auto;">
+    <section class="hero" style="margin: 0">
+      <div style="display: flex; align-items: center; justify-content: flex-start; gap: 150px;">
+        <div>
+          <p class="eyebrow" style="font-size: 20px">Welcome on my portfolio</p>
+          <h1 style="margin: 0; animation: none; font-size: 130px; font-weight: 600; background: linear-gradient(180deg, var(--body-text), rgb(112, 112, 112)); -webkit-background-clip: text;background-clip: text;-webkit-text-fill-color: transparent;color: transparent;">BERLET</h1>
+          <h1 style="margin: 0; animation: none; font-size: 130px; font-weight: 600; background: linear-gradient(180deg, var(--body-text), rgb(112, 112, 112)); -webkit-background-clip: text;background-clip: text;-webkit-text-fill-color: transparent;color: transparent;"><span class="accent">Alexis.</span></h1>
+        </div>
+        <img src="./static/images/me.jpg" alt="csnake showcase" width="300" height="300" style="border-radius: 67px; object-fit: cover;">
+      </div>
+      <p class="subtitle" style="font-size: 22px; font-weight: 400; color: var(--body-text); font-family: var(--intertight);">I am a 2nd year student at EPITECH Lyon in which I am learning about Information Technology and Software Engineering.</p>
+    </section>
+
+    <!--<section class="hero" style="max-width: 900px; margin: 0 auto;">
       <p class="eyebrow">Welcome on my portfolio</p>
       <h1>Ideas that become <span class="accent">real.</span></h1>
       <p class="subtitle">I create, concept, build... <span class="accent">in brief I code.</span></p>
@@ -35,25 +48,27 @@
         <a href="./projects/projects.html" class="btn-about" style="margin: 0px; margin-right: 20px;">Come check my projects</a>
         <a href="./contact/contact.html" class="btn-about" style="margin: 0px;">Contact Me</a>
       </div>
-    </section>
-
-    <section class="section" id="about">
-      <div class="section-inner">
-        <p class="eyebrow">About me</p>
-        <h2>Who am I ?</h2>
-        <p class="body-text">Hi my name is Alexis BERLET, I am a student at EPITECH Lyon learning about Information Technology.</p>
-        <a class="btn-about" href="./about/">More about me</a>
-      </div>
-      <img src="./static/images/me.jpg" alt="csnake showcase" width="300" height="300" style="border-radius: 300px; margin-left: 900px;">
-    </section>
+    </section>-->
 
     <section class="section alt" id="contact">
       <div class="section-inner center">
         <p class="eyebrow">Contact</p>
-        <h2>Interested in my profile ? <span class="accent">Contact me.</span></h2>
+        <h2 style="color: white">Interested in my profile ? <span class="accent" style="color: white">Contact me.</span></h2>
         <div class="contact-buttons">
-          <a href="./contact/contact.html" class="btn-about" style="margin: 0px; margin-right: 20px;">Contact Me</a>
-          <button class="btn-about" onclick="copyEmail()" style="margin: 0px">Copy my email</button>
+          <button class="project-button" onclick="location.href='./contact/contact.html'">
+            <span class="project-button-text">Contact me</span>
+            <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M7 17L17 7"/>
+              <path d="M8 7h9v9"/>
+            </svg>
+          </button>
+          <button class="project-button" onclick="copyEmail()">
+            <span class="project-button-text">Copy my email</span>
+            <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M7 17L17 7"/>
+              <path d="M8 7h9v9"/>
+            </svg>
+          </button>
         </div>
         <p class="toast" id="toast"></p>
       </div>
